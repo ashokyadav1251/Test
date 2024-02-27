@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    public static class Config
+    {
+       // "www.themealdb.com/api/json/v1/1/lookup.php?i=52772"
+       // "www.themealdb.com/api/json/v1/1/filter.php?c=Seafood"
+        public static string BaseUrl = "https://www.themealdb.com/api/json/v1/1/";
+       // public static string BaseUrl = "https://www.themealdb.com/api/json/v1/1/filter.php?";
+        public static string Seafood = "filter.php?c=Seafood";
+        public static string SeafoodDetails = "lookup.php?i={0}";
+    }
+}
