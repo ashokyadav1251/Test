@@ -21,6 +21,7 @@ namespace Test
     		builder.Logging.AddDebug();
 #endif
             builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddSingleton<DetailsPage>();
             builder.Services.AddTransient<MainPageViewModel>();
             builder.Services.AddSingleton<IGetApiCalls, GetApiCalls>();
             return builder.Build();

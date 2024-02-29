@@ -28,7 +28,7 @@ namespace Test.Models
         public string strCategory { get; set; }
         public string strArea { get; set; }
         public string strInstructions { get; set; }
-        public string strTags { get; set; }
+        public object strTags { get; set; }
         public string strYoutube { get; set; }
         public string strIngredient1 { get; set; }
         public string strIngredient2 { get; set; }
@@ -45,11 +45,11 @@ namespace Test.Models
         public string strIngredient13 { get; set; }
         public string strIngredient14 { get; set; }
         public string strIngredient15 { get; set; }
-        public object strIngredient16 { get; set; }
-        public object strIngredient17 { get; set; }
-        public object strIngredient18 { get; set; }
-        public object strIngredient19 { get; set; }
-        public object strIngredient20 { get; set; }
+        public string strIngredient16 { get; set; }
+        public string strIngredient17 { get; set; }
+        public string strIngredient18 { get; set; }
+        public string strIngredient19 { get; set; }
+        public string strIngredient20 { get; set; }
         public string strMeasure1 { get; set; }
         public string strMeasure2 { get; set; }
         public string strMeasure3 { get; set; }
@@ -65,26 +65,27 @@ namespace Test.Models
         public string strMeasure13 { get; set; }
         public string strMeasure14 { get; set; }
         public string strMeasure15 { get; set; }
-        public object strMeasure16 { get; set; }
-        public object strMeasure17 { get; set; }
-        public object strMeasure18 { get; set; }
-        public object strMeasure19 { get; set; }
-        public object strMeasure20 { get; set; }
-        public object strSource { get; set; }
+        public string strMeasure16 { get; set; }
+        public string strMeasure17 { get; set; }
+        public string strMeasure18 { get; set; }
+        public string strMeasure19 { get; set; }
+        public string strMeasure20 { get; set; }
+        public string strSource { get; set; }
         public object strImageSource { get; set; }
         public object strCreativeCommonsConfirmed { get; set; }
         public object dateModified { get; set; }
 
-        public static implicit operator MealDetails?(List<MealDetails>? v)
+        public static implicit operator List<object>(MealDetails? v)
         {
             throw new NotImplementedException();
         }
     }
 
-    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
-    public class RootDetails
+    public class Root1
     {
-        public List<MealDetails> Details { get; set; }
+        public List<MealDetails> meals { get; set; }
     }
+
+
 
 }
